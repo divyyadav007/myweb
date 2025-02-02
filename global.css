@@ -1,0 +1,48 @@
+/* Global styles for fixed header and footer */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+main {
+    margin-top: 80px;
+    min-height: calc(100vh - 80px - 200px);
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1a1a1a;
+    z-index: 1000;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    padding-bottom: 200px;
+    position: relative;
+}
+
+.search-section,
+.papers-container,
+.study-materials-container {
+    padding-bottom: 50px;
+}
+
+@media (max-width: 768px) {
+    main {
+        margin-top: 60px;
+    }
+    
+    body {
+        padding-bottom: 150px;
+    }
+}

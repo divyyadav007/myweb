@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Material - College Papers Portal</title>
+    <link rel="stylesheet" href="study-material.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="home.html">
+                    <h1>College Papers Portal</h1>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="pyq.html">Previous Papers</a></li>
+                <li><a href="study-material.html" class="active">Study Material</a></li>
+                <li><a href="blog.html">Blogs</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+            <button class="theme-toggle" aria-label="Toggle theme">
+                <i class="fas fa-sun"></i>
+                <i class="fas fa-moon"></i>
+            </button>
+        </nav>
+    </header>
+
+
+    <main>
+        <section class="page-hero">
+            <h1>Study Materials</h1>
+            <p>Access comprehensive study resources for better learning</p>
+        </section>
+
+        <div class="filters">
+            <select id="semesterFilter">
+                <option value="">Select Semester</option>
+                <option value="1">Semester 1</option>
+                <option value="2">Semester 2</option>
+                <option value="3">Semester 3</option>
+                <option value="4">Semester 4</option>
+            </select>
+            <select id="subjectFilter">
+                <option value="">Select Subject</option>
+                <option value="cs">Computer Science</option>
+                <option value="math">Mathematics</option>
+                <option value="physics">Physics</option>
+                <option value="chemistry">Chemistry</option>
+            </select>
+            <select id="typeFilter">
+                <option value="">Resource Type</option>
+                <option value="notes">Notes</option>
+                <option value="presentations">Presentations</option>
+                <option value="textbooks">Textbooks</option>
+                <option value="videos">Video Lectures</option>
+            </select>
+        </div>
+
+        <section class="materials-grid">
+            <div class="material-card">
+                <div class="material-icon">
+                    <i class="fas fa-book"></i>
+                </div>
+                <div class="material-content">
+                    <h3>Data Structures Notes</h3>
+                    <p>Comprehensive notes covering all topics</p>
+                    <span class="tag">Computer Science</span>
+                    <span class="tag">Semester 3</span>
+                    <div class="material-actions">
+                        <a href="#" class="btn-preview"><i class="fas fa-eye"></i> Preview</a>
+                        <a href="#" class="btn-download"><i class="fas fa-download"></i> Download</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="material-card">
+                <div class="material-icon">
+                    <i class="fas fa-video"></i>
+                </div>
+                <div class="material-content">
+                    <h3>Calculus Video Lectures</h3>
+                    <p>Video series on differential equations</p>
+                    <span class="tag">Mathematics</span>
+                    <span class="tag">Semester 2</span>
+                    <div class="material-actions">
+                        <a href="#" class="btn-preview"><i class="fas fa-play"></i> Watch</a>
+                        <a href="#" class="btn-download"><i class="fas fa-download"></i> Download</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="material-card">
+                <div class="material-icon">
+                    <i class="fas fa-file-powerpoint"></i>
+                </div>
+                <div class="material-content">
+                    <h3>Digital Electronics Slides</h3>
+                    <p>Complete presentation set for DE</p>
+                    <span class="tag">Electronics</span>
+                    <span class="tag">Semester 3</span>
+                    <div class="material-actions">
+                        <a href="#" class="btn-preview"><i class="fas fa-eye"></i> Preview</a>
+                        <a href="#" class="btn-download"><i class="fas fa-download"></i> Download</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="material-card">
+                <div class="material-icon">
+                    <i class="fas fa-flask"></i>
+                </div>
+                <div class="material-content">
+                    <h3>Organic Chemistry Notes</h3>
+                    <p>Detailed notes with diagrams</p>
+                    <span class="tag">Chemistry</span>
+                    <span class="tag">Semester 1</span>
+                    <div class="material-actions">
+                        <a href="#" class="btn-preview"><i class="fas fa-eye"></i> Preview</a>
+                        <a href="#" class="btn-download"><i class="fas fa-download"></i> Download</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="copyright">
+        <p>&copy; 2024 College Papers Portal. All rights reserved.</p>
+    </footer>
+    <script src="study-material.js"></script>
+    <script src="theme.js"></script>
+</body>
+</html>

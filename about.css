@@ -1,0 +1,399 @@
+/* Import the common styles from home.css */
+@import 'home.css';
+
+.about-container {
+    max-width: var(--max-width);
+    margin: 76px auto 0;
+    padding: 4rem 2rem;
+}
+
+.about-hero {
+    text-align: center;
+    margin-bottom: 5rem;
+    padding: 4rem 2rem;
+    background: linear-gradient(to right, var(--secondary-color), var(--primary-dark));
+    border-radius: var(--border-radius);
+    color: var(--text-light);
+}
+
+.about-hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.025em;
+}
+
+.about-hero p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.25rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.mission-vision {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    margin-bottom: 5rem;
+}
+
+.mission, .vision {
+    background: var(--background-card);
+    padding: 3rem 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-normal);
+    text-align: center;
+    transition: all var(--transition-normal);
+    border: 1px solid rgba(229, 231, 235, 0.5);
+}
+
+.mission:hover, .vision:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.mission i, .vision i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.what-we-offer {
+    text-align: center;
+    max-width: 1000px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    letter-spacing: -0.025em;
+}
+
+.offers-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    justify-content: center;
+}
+
+.center-card {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.offer-card {
+    background: var(--background-card);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-normal);
+    border: 1px solid var(--border-color);
+    transition: all var(--transition-normal);
+}
+
+.offer-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.offer-card i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.team-section {
+    padding: 5rem 2rem;
+    background: var(--background-light);
+}
+
+.team-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 3rem;
+    letter-spacing: -0.025em;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.team-member {
+    background: var(--background-card);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    transition: all var(--transition-normal);
+    box-shadow: var(--shadow-normal);
+    border: 1px solid var(--border-color);
+    padding: 2rem;
+    text-align: center;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.member-image {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    border: 4px solid rgba(59, 130, 246, 0.1);
+    transition: all var(--transition-normal);
+}
+
+.member-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-normal);
+}
+
+.team-member:hover .member-image {
+    border-color: var(--primary-color);
+    transform: scale(1.05);
+}
+
+.member-info h3 {
+    color: var(--text-dark);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.member-role {
+    color: var(--primary-color);
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.member-bio {
+    color: var(--text-gray);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.member-social {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.member-social a {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-light);
+    font-size: 1.2rem;
+    transition: all var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+    text-decoration: none;
+}
+
+.member-social a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, var(--accent-color), var(--primary-color));
+    opacity: 0;
+    transition: opacity var(--transition-normal);
+}
+
+.member-social a:hover::before {
+    opacity: 1;
+}
+
+.member-social a i {
+    position: relative;
+    z-index: 1;
+}
+
+.member-social a:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
+}
+
+.achievements {
+    margin-bottom: 4rem;
+}
+
+.achievements h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.achievement-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.stat {
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.stat i {
+    font-size: 2rem;
+    color: #3498db;
+    margin-bottom: 1rem;
+}
+
+.stat h3 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.testimonials {
+    margin-bottom: 4rem;
+}
+
+.testimonials h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.testimonial {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.testimonial i {
+    color: #3498db;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.testimonial h4 {
+    color: #2c3e50;
+    margin-top: 1rem;
+}
+
+.testimonial .college {
+    color: #666;
+    font-style: italic;
+}
+
+/* Dark mode adjustments */
+[data-theme="dark"] .team-member {
+    background: var(--background-card);
+}
+
+[data-theme="dark"] .member-info h3 {
+    color: var(--text-light);
+}
+
+[data-theme="dark"] .member-bio {
+    color: var(--text-gray);
+}
+
+/* Add responsive styles */
+@media (max-width: 768px) {
+    .mission-vision {
+        grid-template-columns: 1fr;
+    }
+
+    .about-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .team-section {
+        padding: 4rem 1rem;
+    }
+
+    .team-section h2 {
+        font-size: 2rem;
+    }
+
+    .member-image {
+        width: 150px;
+        height: 150px;
+    }
+
+    .what-we-offer {
+        padding: 0 1rem;
+        margin: 3rem auto;
+    }
+    
+    .offers-grid {
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-container {
+        padding: 2rem 1rem;
+    }
+
+    .about-hero {
+        padding: 3rem 1rem;
+    }
+
+    .about-hero h1 {
+        font-size: 2rem;
+    }
+
+    .about-hero p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .offers-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .center-card {
+        grid-column: 1 / -1;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .offers-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .center-card {
+        grid-column: 1;
+    }
+}
