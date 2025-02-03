@@ -44,4 +44,12 @@ document.addEventListener('DOMContentLoaded', function() {
         stat.style.transition = 'all 0.5s ease-out';
         observer.observe(stat);
     });
+
+    // Mobile menu toggle
+    const menuButton = document.querySelector('.theme-toggle');
+    const nav = document.querySelector('.nav-links');
+
+    menuButton.addEventListener('click', () => {
+        nav.classList.toggle('active');
+    });
 });
