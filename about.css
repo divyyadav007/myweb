@@ -356,6 +356,31 @@
     .offers-grid {
         gap: 1.5rem;
     }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background: var(--background-light);
+        padding: 1rem;
+        border-radius: var(--border-radius);
+        box-shadow: var(--shadow-normal);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 0.5rem 0;
+    }
 }
 
 @media (max-width: 480px) {
@@ -395,5 +420,43 @@
     
     .center-card {
         grid-column: 1;
+    }
+}
+
+/* Add styles for the hamburger menu */
+.hamburger {
+    display: none; /* Hidden by default */
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem; /* Size of the hamburger icon */
+    color: var(--text-dark);
+}
+
+/* Show hamburger on smaller screens */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; /* Show hamburger icon */
+    }
+
+    .nav-links {
+        display: none; /* Hide nav links by default */
+        flex-direction: column; /* Stack links vertically */
+        position: absolute;
+        top: 60px; /* Position below the nav */
+        left: 0;
+        right: 0;
+        background: var(--background-light);
+        padding: 1rem;
+        border-radius: var(--border-radius);
+        box-shadow: var(--shadow-normal);
+    }
+
+    .nav-links.active {
+        display: flex; /* Show links when active */
+    }
+
+    .nav-links li {
+        margin: 0.5rem 0; /* Space between links */
     }
 }

@@ -167,8 +167,29 @@
     transform: translateY(-2px);
 }
 
+.hamburger {
+    display: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    background: none;
+    border: none;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-dark);
+    margin: 5px 0;
+    transition: all var(--transition-normal);
+}
+
 /* Responsive styles */
 @media (max-width: 768px) {
+    .hamburger {
+        display: block;
+        z-index: 1001;
+    }
     .materials-grid {
         padding: 1.5rem 1rem;
         gap: 1.5rem;
@@ -176,6 +197,18 @@
 
     .material-content {
         padding: 1.5rem;
+    }
+    /* Hamburger animation classes */
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
     }
 }
 
