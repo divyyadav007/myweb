@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,6 +12,10 @@
 </head>
 
 <body>
+    <div class="loader-wrapper">
+        <div class="loader"></div>
+    </div>
+
     <header>
         <nav>
             <div class="logo">
@@ -240,6 +245,10 @@
     <script src="nav.js"></script>
     <script src="home.js"></script>
     <script src="theme.js"></script>
+    <button class="scroll-to-top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    <script>window.addEventListener('load', () => document.querySelector('.loader-wrapper').classList.add('fade-out'));</script>
 </body>
 
 

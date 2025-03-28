@@ -2,5 +2,7 @@
     "CodeGPT.apiKey": "CodeGPT Plus Beta",
     "github.copilot.advanced": {
         
-    }
+    },
+    "IDX.aI.enableInlineCompletion": true,
+    "IDX.aI.enableCodebaseIndexing": true
 }

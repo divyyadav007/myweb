@@ -842,7 +842,7 @@ main {
 
 /* Responsive styles for hero section */
 @media (max-width: 768px) {
-    .page-hero {
+.search-section, .page-hero {
         padding: 3rem 1.5rem;
         margin-top: 96px;
     }
@@ -855,7 +855,7 @@ main {
         font-size: 1.1rem;
     }
 }
-
+.search-section, 
 @media (max-width: 480px) {
     .page-hero {
         padding: 2.5rem 1rem;

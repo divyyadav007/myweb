@@ -44,4 +44,32 @@ document.addEventListener('DOMContentLoaded', function() {
         stat.style.transition = 'all 0.5s ease-out';
         observer.observe(stat);
     });
+
+    // Loading animation
+    const loader = document.querySelector('.loader-wrapper');
+    window.addEventListener('load', () => {
+        loader.classList.add('fade-out');
+        setTimeout(() => {
+            loader.style.display = 'none';
+        }, 500);
+    });
+
+    // Scroll to top button
+    const scrollToTopBtn = document.querySelector('.scroll-to-top');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            scrollToTopBtn.classList.add('visible');
+        } else {
+            scrollToTopBtn.classList.remove('visible');
+        }
+    });
+
+    scrollToTopBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
 });

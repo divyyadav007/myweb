@@ -49,4 +49,27 @@ document.addEventListener('DOMContentLoaded', function() {
             alert('Opening preview... (Demo)');
         });
     });
+     // Scroll to top button functionality
+    const scrollToTopBtn = document.querySelector('.scroll-to-top');
+
+    // Show/hide button based on scroll position
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            scrollToTopBtn.classList.add('visible');
+        } else {
+            scrollToTopBtn.classList.remove('visible');
+        }
+    });
+
+    // Scroll to top when button is clicked
+    scrollToTopBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+      // Hide loading animation after everything is loaded
+      document.querySelector('.loader-wrapper').classList.add('fade-out');
 });

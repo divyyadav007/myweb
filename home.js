@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
+    
     // Search functionality
     const searchInput = document.getElementById('searchInput');
     const searchButton = document.getElementById('searchButton');
@@ -73,5 +74,29 @@ document.addEventListener('DOMContentLoaded', function() {
         const windowHeight = document.documentElement.scrollHeight - window.innerHeight;
         const progress = window.scrollY / windowHeight;
         scrollProgress.style.transform = `scaleX(${progress})`;
+    });
+
+    // Loading animation
+    const loaderWrapper = document.querySelector('.loader-wrapper');
+    window.addEventListener('load', () => {
+        loaderWrapper.classList.add('fade-out');
+        setTimeout(() => {
+            loaderWrapper.style.display = 'none';
+        }, 500);
+    });
+
+    // Scroll to top button functionality
+    const scrollToTopBtn = document.querySelector('.scroll-to-top');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            scrollToTopBtn.classList.add('visible');
+        } else {
+            scrollToTopBtn.classList.remove('visible');
+        }
+    });
+
+    scrollToTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 });
